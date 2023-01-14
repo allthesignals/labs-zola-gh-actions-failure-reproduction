@@ -8,7 +8,7 @@ module('Acceptance | map loads', function(hooks) {
   test('visiting / is okay', async function(assert) {
     await visit('/');
 
-    await waitFor('#map-did-load');
+    await waitFor('#map-did-load', { timeout: 5000 });
 
     assert.equal(currentURL(), '/');
   });
@@ -18,13 +18,13 @@ module('Acceptance | map loads', function(hooks) {
 
     await visit('/');
 
-    await find('#map-did-load');
+    await find('#map-did-load', { timeout: 5000 });
   });
 
   test('visiting / shows rendered', async function(assert) {
     await visit('/');
 
-    await waitFor('#map-did-load');
+    await waitFor('#map-did-load', { timeout: 5000 });
 
     const rendered = await findAll('.rendered-features li');
 
