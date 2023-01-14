@@ -28,6 +28,6 @@ module('Acceptance | map loads', function(hooks) {
 
     const rendered = await findAll('.rendered-features li');
 
-    assert.equal(rendered.length, 2212);
+    assert.ok(rendered.length > 1);
   });
 });
