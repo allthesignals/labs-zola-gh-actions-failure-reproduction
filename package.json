@@ -48,5 +48,9 @@
   },
   "engines": {
     "node": "8.* || >= 10.*"
+  },
+  "dependencies": {
+    "ember-mapbox-gl": "0.14.0",
+    "mapbox-gl": "1.0.0"
   }
 }

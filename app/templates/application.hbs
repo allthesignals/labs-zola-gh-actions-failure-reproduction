@@ -1,5 +1,11 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
+{{#mapbox-gl mapLoaded=(action this.handleMapLoad) id="map"}}
+  <div id="map-did-load"></div>
+{{/mapbox-gl}}
+
+<ul class="rendered-features">
+  {{#each this.renderedFeatures as |feature|}}
+    <li class={{feature.layer.id}}>{{feature.layer.id}}</li>
+  {{/each}}
+</ul>
 
 {{outlet}}
