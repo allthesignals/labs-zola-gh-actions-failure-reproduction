@@ -19,9 +19,6 @@ jobs:
       - name: install dependencies
         run: yarn install --frozen-lockfile --non-interactive
       - name: build
-        env:
-          DISABLE_SOURCE_MAPS: true
-          BROCCOLI_ENV: production
-        run: yarn ember build -prod
+        run: yarn ember build
       - name: test
         run: yarn test
